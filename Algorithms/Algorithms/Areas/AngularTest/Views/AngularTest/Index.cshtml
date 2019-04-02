@@ -1,0 +1,55 @@
+﻿@{
+    ViewData["Title"] = "Angular Testing";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script type="text/javascript">
+    var myApp = angular.module('myApp', []);
+
+    myApp.controller('myAppCtrl', function ($scope, $http) {
+        //$scope.somestring = 'test string';
+        $scope.employeeModel = @Html.Raw(Json.Serialize(Model));
+
+        var abc;
+        $scope.update = function(p1) {
+            $http({
+                url: 'AngularTest/UpdateData?p1=' + p1,
+                method: 'GET'
+            }).then(function(data) {
+                $scope.somestring = data.data.extra;
+                $scope.employeeModel = data.data;
+                abc = data;
+                console.log(abc);
+            });
+        };
+    });
+</script>
+
+
+<h2>@ViewData["Title"]</h2>
+<h3>@ViewData["Message"]</h3>
+
+<div>
+    <div ng-app="myApp" ng-controller="myAppCtrl">
+        {{ firstName + " " + lastName }}
+        <br />
+        <p>
+            <input type="text" ng-model="inputdata" />
+            <br />
+            Output: {{inputdata}}
+            <br />
+            From controller: {{somestring}}
+            <br />
+            test: {{employeeModel}}<br />
+            FirstName: {{employeeModel.firstName}}<br />
+            LastName: {{employeeModel.lastName}}
+            <br />
+            <input type="submit" ng-click="update(inputdata)" value="Update" />
+        </p>
+    </div>
+</div>
+
+
+
+
+<script src="~/js/controller.js"></script>
