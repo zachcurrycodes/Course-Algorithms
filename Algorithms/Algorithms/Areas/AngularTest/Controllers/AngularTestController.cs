@@ -1,5 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Algorithms.Areas.AngularTest.Models;
+﻿using Algorithms.Areas.AngularTest.Models;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Algorithms.Controllers
 {
