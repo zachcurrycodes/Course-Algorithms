@@ -34,5 +34,6 @@ C:\zCode\Course-Algorithms\Algorithms\Algorithms\obj\Debug\netcoreapp2.1\Algorit
 C:\zCode\Course-Algorithms\Algorithms\Algorithms\obj\Debug\netcoreapp2.1\Algorithms.pdb
 C:\zCode\Course-Algorithms\Algorithms\Algorithms\obj\Debug\netcoreapp2.1\Algorithms.csproj.CopyComplete
 C:\zCode\Course-Algorithms\Algorithms\Algorithms\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_NavBar.g.cshtml.cs
-C:\zCode\Course-Algorithms\Algorithms\Algorithms\obj\Debug\netcoreapp2.1\Razor\Areas\Anagram\Views\Anagram\Index.g.cshtml.cs
 C:\zCode\Course-Algorithms\Algorithms\Algorithms\obj\Debug\netcoreapp2.1\Razor\Areas\AngularTest\Views\AngularTest\Index.g.cshtml.cs
+C:\zCode\Course-Algorithms\Algorithms\Algorithms\obj\Debug\netcoreapp2.1\Razor\Areas\Exercises1\Anagram\Views\Anagram\Index.g.cshtml.cs
+C:\zCode\Course-Algorithms\Algorithms\Algorithms\obj\Debug\netcoreapp2.1\Razor\Areas\Exercises\Views\Exercises\Index.g.cshtml.cs

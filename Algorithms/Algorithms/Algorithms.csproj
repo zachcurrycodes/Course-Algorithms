@@ -12,6 +12,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Areas\Exercises\Data\" />
+    <Folder Include="Areas\Exercises\Models\" />
     <Folder Include="MyClasses\" />
   </ItemGroup>
 

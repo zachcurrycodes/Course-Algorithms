@@ -54,8 +54,18 @@ namespace Algorithms
 
             app.UseMvc(routes => {
                 routes.MapRoute(
-                    name: "anagram",
-                    template: "{area:exists}/{controller=Anagram}/{action=Index}/{id?}");
+                  name: "areas",
+                  template: "{area:exists}/{controller=Home}/{action=Index}/{id?}"
+                );
+
+                routes.MapAreaRoute(
+                    name: "areaExercises",
+                    areaName: "Exercises",
+                    template: "Exercises/{controller=Home}/{action=Index}/{id?}");
+
+                //routes.MapRoute(
+                //    name: "anagram",
+                //    template: "{area:exists}/{controller=Anagram}/{action=Index}/{id?}");
 
                 routes.MapRoute(
                     name: "abc",

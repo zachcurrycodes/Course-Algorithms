@@ -1,0 +1,57 @@
+﻿@{
+    ViewData["Title"] = "Exercises";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@ViewData["Title"]</h2>
+<h3>@ViewData["Message"]</h3>
+<div>
+    <div ng-app="myApp" ng-controller="ExcerisesJSCtrl">
+
+
+        Dropdown:
+        <select>
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="mercedes">Mercedes</option>
+            <option value="audi">Audi</option>
+        </select>
+
+        @*<input type="submit" ng-click="update(inputdata)" value="Update" />*@
+
+        <select [ngModel]="selectedDevice" (ngModelChange)="onChange($event)" name="sel2">
+            <option [value]="i" *ngFor="let i of devices">{{i}}</option>
+        </select>
+
+    </div>
+</div>
+
+
+
+@*<script src="~/js/AreaExcercisesJSController.js"></script>*@
+
+<script>
+    var myApp = angular.module('myApp', []);
+    var devices;
+    var selectedDevice;
+
+    myApp.controller('ExcerisesJSCtrl', function ($event) {
+        ExerciseDropDown($event);
+    });
+
+
+    function ExerciseDropDown(newValue) {
+        devices = 'one two three'.split(' ');
+
+        selectedDevice = 'two';
+
+        onChange(newValue) {
+            console.log(newValue);
+            this.selectedDevice = newValue;
+            // ... do other stuff here ...
+        };
+    };
+
+
+
+</script>
