@@ -20,7 +20,7 @@
         @*<input type="submit" ng-click="update(inputdata)" value="Update" />*@
 
         <select [ngModel]="selectedDevice" (ngModelChange)="onChange($event)" name="sel2">
-            <option [value]="i" *ngFor="let i of devices">{{i}}</option>
+            @*<option [value]="i" *ngFor="let i of devices">{{i}}</option>*@
         </select>
 
     </div>

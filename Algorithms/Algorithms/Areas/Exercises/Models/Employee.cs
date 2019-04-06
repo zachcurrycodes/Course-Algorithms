@@ -1,4 +1,4 @@
-﻿namespace Algorithms.Areas.AngularTest.Models
+﻿namespace Algorithms.Areas.Exercises.Models
 {
     public class Employee
     {

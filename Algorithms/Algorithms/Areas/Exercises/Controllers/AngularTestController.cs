@@ -1,9 +1,9 @@
-﻿using Algorithms.Areas.AngularTest.Models;
+﻿using Algorithms.Areas.Exercises.Models;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Algorithms.Controllers
+namespace Algorithms.Areas.Exercises.Controllers
 {
-    [Area("AngularTest")]
+    [Area("Exercises")]
     public class AngularTestController : Controller
     {
         public IActionResult Index() {

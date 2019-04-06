@@ -1,0 +1,54 @@
+﻿@{
+    ViewData["Title"] = "Anagram";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+
+
+<h2>@ViewData["Title"]</h2>
+<h3>@ViewData["Message"]</h3>
+
+<p>Enter a word into each textbox</p>
+
+
+
+<div>
+    <div ng-app="myApp" ng-controller="myAppCtrl">
+        <div>
+            <input id="TextBox1" type="text" ng-model="text1" />
+            <label for="TextBox1">First Word</label>
+        </div>
+        <br />
+        <div>
+            <input id="TextBox2" type="text" ng-model="text2" />
+            <label for="TextBox2">Second Word</label>
+        </div>
+        <br />
+        <div>
+            <input id="Button1" type="button" value="??" ng-click="update(text1, text2)" />
+            <a asp-area="Anagram" asp-controller="Anagram" asp-action="Calculate"></a>
+        </div>
+
+        <br>
+
+        <div ng-hide="displayResult = ''">
+            <div>
+                Result: {{anagramModel.displayResult}}
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="~/js/AnagramJSController.js"></script>
+<script type="text/javascript">
+    var myApp = angular.module('myApp', []);
+
+    myApp.controller('myAppCtrl', function ($scope, $http) {
+        $scope.anagramModel =  @Html.Raw(Json.Serialize(Model));
+        myAnagramCtrl($scope, $http);
+    });
+
+</script>
