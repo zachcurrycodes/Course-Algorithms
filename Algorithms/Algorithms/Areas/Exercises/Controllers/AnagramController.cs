@@ -22,14 +22,18 @@ namespace Algorithms.Areas.Exercises.Controllers
             return Json(response);
         }
 
-        [HttpGet]
-        public IActionResult Calculate(string text1, string text2) {
-            Anagram a = new Anagram(
-                first: text1,
-                second: text2
-            );
-
-            var response = a.ValidAnagram();
+        [HttpPost]
+        public IActionResult Calculate([FromBody] Anagram ab) {
+            string response;
+            if (ab.first == null || ab.second == null) {
+                response = "Atleast one word is null";
+            } else {
+                Anagram a = new Anagram(
+                    first: ab.first,
+                    second: ab.second
+                );
+                response = a.ValidAnagram();
+            }
             return Json(response);
         }
     }

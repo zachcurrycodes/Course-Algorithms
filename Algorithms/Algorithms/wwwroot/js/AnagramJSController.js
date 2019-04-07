@@ -10,14 +10,16 @@ function myAnagramCtrl(scope, http) {
             data: {
                 text1: text1,
                 text2: text2
-            }
-        }).then(afterCalculate);
+            },
+            dataType: 'json',
+            success: afterCalculate
+        });
     };
 
     var afterCalculate = function (data) {
-        //scope.displayResult = response.data;
-        scope.anagramModel = data.data;
-        scope.displayResult = anagramModel.displayResult;
+        scope.displayResult = response.data;
+        //scope.anagramModel = data.data;
+        //scope.displayResult = anagramModel.displayResult;
     }
 
 
